@@ -69,10 +69,14 @@ body::before {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 25px;
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: perspective(500px) rotateX(15deg);
 }
 
 .game-header h1::after {
@@ -82,6 +86,20 @@ body::before {
     right: -20px;
     font-size: 1.5rem;
     animation: sparkle 2s ease-in-out infinite;
+}
+
+.game-header h1::before {
+    content: '🎮';
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    font-size: 1.5rem;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
 @keyframes sparkle {
@@ -448,7 +466,9 @@ body::before {
     }
     
     .game-header h1 {
-        font-size: 2rem;
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+        transform: perspective(300px) rotateX(10deg);
     }
     
     .game-stats {
